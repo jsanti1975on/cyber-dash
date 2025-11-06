@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home Lab Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to my Cyber-Lab Dashboard</h1>
+
+  <h3>[Authentication Challenge] Which button proceeds?</h3>
+  <button class="option-button" onclick="checkAnswer(true)">_(underscore)</button>
+  <button class="option-button" onclick="checkAnswer(false)">JavaScript</button>
+  <button class="option-button" onclick="checkAnswer(false)">CSS</button>
+  <p id="result"</p>
+
+    <div id="nav-links"> style="display:none; margin-top:30px;">
+      <h3>Upload a File</h3>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Uploads</button>
+      </form>
+
+      <h3>Shared Files</h3>
+      <p><a href="/uploads/">Browse uploads here</a></p>
+
+      <h3> Infrastructure Access </h3>
+      
+      
+        
+      
+
+  
+</body>
