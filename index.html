@@ -29,10 +29,28 @@
       <h3> Infrastructure Access </h3>
       <!--||-->
       <a href="tux-talks.html">
-      
-      
-        
-      
+        <button class="nav-button">Tux Talks</button>
+      </a>
 
-  
+      <h3>CTF Cheats</h3>
+      <a href="cheats/index.html" target="_blank">
+        <button class="nav-button">Open Cheat Dashboard</button>
+      </a>
+    </div>
+
+    <script>
+      function checkAnswer(isCorrect) {
+        const result = document.getElementById("result");
+        const navLinks = document.getElementById("nav-links");
+
+        if (isCorrect) {
+          result.innerHTML = "Correct! Dashboard unlocked.";
+          navLinks.style.display = "block";
+        } else {
+          result.innerHTML = "Incorrect. Try again!";
+        }
+      }
+    </script>
 </body>
+</html>
+
