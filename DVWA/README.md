@@ -1,3 +1,8 @@
+<img width="1934" height="1094" alt="01_Installed _On_RHEL10" src="https://github.com/user-attachments/assets/996c7d94-89f3-43e4-bc94-766b74618abf" />
+
+
+
+
 Damn Vulnerable Web Application (DVWA)
 RHEL 10 Installation & Lab Setup Guide
 
