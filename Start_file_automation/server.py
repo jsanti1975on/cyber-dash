@@ -52,3 +52,7 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
                  self.send_header('Content-type', 'text/plain')
                  self.end_headers()
                  self.wfile.write(b"root:x:0:0:root:/root:/bin/bash\n")
+                 return
+
+              upload_path = os.path.join('uploads', sanatized_filename)
+          
