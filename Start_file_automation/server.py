@@ -75,5 +75,46 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
                       function redirectToUpload() {{
                           window.location.href = '/upload';
                       }}
-                  </script>    
+                  </script>
+               </head>
+               <body style="text-align:center; background-color: black; color: green;">
+                 <h2>File Uploaded Successfully!</h2>
+                 <p>File: {sanitized_filename}</p>
+                 <img src='/success.png' alt='Success Image' width='300'>
+                 <br><br>
+                 <button onclick="redirectToUpload()" style="font-size:18px; padding:10px; background-color:#34ac44; color:white; border:none; border-radius:5px; cursor:pointer;">
+                     ⬅ Upload Another File
+                 </button>
+               </body>
+               </html>
+               """
+
+               self.wfile.write(success_message.encode())
+               return
+
+         self.send_response(400)
+         self.end_headers()
+         self.wfile.write(b"File upload failed")
+except Exception as e:
+    logger.error(f"Error during file upload: {e}")
+    self.send_response(500)
+    self.end_headers()
+    self.wfile.write(b"Internal server error")
+
+
+        
+        
+          
+
+
+
+
+
+
+
+
+
+
+               
+               
           
